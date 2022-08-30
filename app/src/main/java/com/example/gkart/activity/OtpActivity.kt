@@ -60,7 +60,7 @@ class OtpActivity : AppCompatActivity() {
 
                 }else{
 
-                    Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Invalid OTP", Toast.LENGTH_SHORT).show()
                     }
                 }
             }

@@ -29,7 +29,7 @@ class PaymentActivity : AppCompatActivity() {
         }
         binding.btnPay.setOnClickListener {
             Toast.makeText(this, "Thank you for shopping with us", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
     }

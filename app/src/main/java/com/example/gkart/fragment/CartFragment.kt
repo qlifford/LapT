@@ -37,8 +37,6 @@ class CartFragment : Fragment() {
 
         dao.getAllProducts().observe(requireActivity()){
             binding.cartRecycler.adapter = CartAdapter(requireContext(), it)
-
-
             list.clear()
             for (data in it){
                 list.add(data.productId)
@@ -50,12 +48,15 @@ class CartFragment : Fragment() {
     }
 
     private fun totalCost(data: List<ProductModel>?) {
+        list.clear()
         var total = 0
         for (item in data!!) {
            total += item.productSp!!.toInt()
 
             binding.textView12.text = "Total items in cart : ${data.size}"
             binding.textView13.text = "Total Cost : $total"
+
+
 
             binding.checkout.setOnClickListener {
                 val intent = Intent(context, AddressActivity::class.java)
